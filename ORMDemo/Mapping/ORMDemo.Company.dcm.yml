@@ -1,0 +1,15 @@
+ORMDemo\Company:
+    table: companies
+    type: entity
+    fields:
+        name:
+            type: string
+    id:
+        id:
+            type: integer
+            generator: 
+                strategy: AUTO
+    oneToMany:
+        orders:
+            targetEntity: Order
+            mappedBy: company

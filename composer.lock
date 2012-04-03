@@ -1,0 +1,26 @@
+{
+    "hash": "528682c31dcafc83866265845637c79b",
+    "packages": [
+        {
+            "package": "doctrine/common",
+            "version": "2.2.1"
+        },
+        {
+            "package": "doctrine/dbal",
+            "version": "2.2.1"
+        },
+        {
+            "package": "doctrine/orm",
+            "version": "2.2.0"
+        },
+        {
+            "package": "symfony/console",
+            "version": "v2.0.10"
+        },
+        {
+            "package": "symfony/yaml",
+            "version": "v2.0.12"
+        }
+    ],
+    "aliases": []
+}
