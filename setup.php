@@ -1,5 +1,6 @@
 <?php
-define('DB_PW', 'root');
+define('DB_USER', '');
+define('DB_PW', '');
 
 require 'vendor/.composer/autoload.php';
 
@@ -11,7 +12,7 @@ use ORMDemo\Order;
 // Initialize the Doctrine2 EntityManager 
 $dbParams = array(
     'driver' => 'pdo_mysql',
-    'user' => 'root',
+    'user' => DB_USER,
     'password' => DB_PW,
     'dbname' => 'ormdemo'
 );
@@ -64,7 +65,7 @@ function getRawData() {
 function initFixtures() {
     global $em;
 
-    if (!trim(DB_PW)) {
+    if (!trim(DB_PW) || !trim(DB_USER)) {
         die("Error: Please set your database password in setup.php, line 2, and create an empty database, named ormdemo\n");
     }
     $dbal = $em->getConnection();
