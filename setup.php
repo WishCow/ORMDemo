@@ -41,10 +41,10 @@ function getAllCompanies() {
 function getAllCompaniesWithOrdersSummed() {
     global $em;
 
-    $dql = "SELECT   c, o, SUM(o.value)
+    $dql = "SELECT   c, SUM(o.value)
             FROM     ORMDemo\\Company c
             JOIN     c.orders o
-            GROUP BY c.id";
+            GROUP BY c.id, c.name";
     $query = $em->createQuery($dql);
 
     echo $query->getSQL()."\n";
